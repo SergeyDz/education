@@ -1,0 +1,20 @@
+﻿<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">ASP.NET Web API</a></p>
+        </div>
+    </div>
+</header>
+<div id="body" ng-controller="PhoneListConroller">
+    <script src="~/Client/angular.js" type='text/javascript'></script>
+    <script src="~/Client/phone.controller.js" type='text/javascript'></script>
+    
+   <ul>
+    <li ng-repeat="phone in phones">
+      {{phone.name}}
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+
+</div>
