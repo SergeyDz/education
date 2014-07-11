@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <header>
+        <div>@ViewBag.Title</div>
+    </header>
+    <nav>
+        <div>
+            <a href="~/Product/Index">Index</a>
+        </div>
+    </nav>
+    <section>
+        <article>
+            @RenderBody()
+        </article>
+    </section>
+</body>
+</html>

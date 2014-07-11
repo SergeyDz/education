@@ -2,10 +2,25 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API.Samples.Host", "Web.API.Samples.Host\Web.API.Samples.Host.csproj", "{82C96677-CCE9-4760-8BA6-C8A14CB1C008}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AF685C57-C0B6-4D22-B4E9-417FB6BB1567} = {AF685C57-C0B6-4D22-B4E9-417FB6BB1567}
+		{298E61FF-B620-46D9-A85B-D96CCC902C88} = {298E61FF-B620-46D9-A85B-D96CCC902C88}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API.Samples.Client", "Web.API.Samples.Client\Web.API.Samples.Client.csproj", "{AF685C57-C0B6-4D22-B4E9-417FB6BB1567}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API.Samples.Mvc", "Web.API.Samples.Mvc\Web.API.Samples.Mvc.csproj", "{298E61FF-B620-46D9-A85B-D96CCC902C88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Social", "Social", "{69CA0BC4-71CF-41BE-B3CA-53F3FF037765}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API.Samples.Social.Twitter", "Social\Web.API.Samples.Social.Twitter\Web.API.Samples.Social.Twitter.csproj", "{EA723693-8355-4B8C-A25D-19576615A72C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{119C7ED6-AE76-48C2-9457-8C212F1CF9E6}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,8 +40,15 @@ Global
 		{298E61FF-B620-46D9-A85B-D96CCC902C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{298E61FF-B620-46D9-A85B-D96CCC902C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{298E61FF-B620-46D9-A85B-D96CCC902C88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA723693-8355-4B8C-A25D-19576615A72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA723693-8355-4B8C-A25D-19576615A72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA723693-8355-4B8C-A25D-19576615A72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA723693-8355-4B8C-A25D-19576615A72C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EA723693-8355-4B8C-A25D-19576615A72C} = {69CA0BC4-71CF-41BE-B3CA-53F3FF037765}
 	EndGlobalSection
 EndGlobal
