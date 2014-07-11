@@ -1,4 +1,4 @@
-﻿// <copyright file="Class1.cs" company="localhost">
+﻿// <copyright file="TwitterAPITest.cs" company="localhost">
 // Copyright (c) 2014 All Rights Reserved
 // </copyright>
 // <author>Sergey Dzyuban</author>
@@ -6,7 +6,6 @@
 // <summary></summary>
 namespace Web.API.Samples.Social.Twitter.Test
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;
     using System.Collections.Generic;
     using System.Configuration;
@@ -15,6 +14,7 @@ namespace Web.API.Samples.Social.Twitter.Test
     using System.Net.Http;
     using System.Text;
     using System.Threading.Tasks;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class TwitterAPITest
@@ -25,8 +25,7 @@ namespace Web.API.Samples.Social.Twitter.Test
             Spring.Social.Twitter.Connect.TwitterServiceProvider provider = 
                 new Spring.Social.Twitter.Connect.TwitterServiceProvider(
                     ConfigurationManager.AppSettings["ConsumerKey"], ConfigurationManager.AppSettings["ConsumerSecret"]);
-            Spring.Social.Twitter.Api.ITwitter api = provider.GetApi(ConfigurationManager.AppSettings["AccessToken"],
-                ConfigurationManager.AppSettings["AccessTokenSecret"]);
+            Spring.Social.Twitter.Api.ITwitter api = provider.GetApi(ConfigurationManager.AppSettings["AccessToken"], ConfigurationManager.AppSettings["AccessTokenSecret"]);
             bool auth = api.IsAuthorized;
             Assert.IsTrue(auth);
 
@@ -40,7 +39,6 @@ namespace Web.API.Samples.Social.Twitter.Test
                 EventLog.WriteEntry("TwitterAPITest", e.Message);
                 throw;
             }
-           
         }
     }
 }
