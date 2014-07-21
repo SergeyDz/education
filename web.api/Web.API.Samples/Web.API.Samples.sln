@@ -22,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{119C7E
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".src", ".src", "{1E776CEB-EF48-419E-9EA5-6A9E5CA1031F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API.Samples.Data", ".src\Web.API.Samples.Data\Web.API.Samples.Data.csproj", "{2E9BFAD6-332D-4E4A-BD84-7039A61FFEC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,11 +48,16 @@ Global
 		{EA723693-8355-4B8C-A25D-19576615A72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA723693-8355-4B8C-A25D-19576615A72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA723693-8355-4B8C-A25D-19576615A72C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E9BFAD6-332D-4E4A-BD84-7039A61FFEC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9BFAD6-332D-4E4A-BD84-7039A61FFEC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9BFAD6-332D-4E4A-BD84-7039A61FFEC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9BFAD6-332D-4E4A-BD84-7039A61FFEC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EA723693-8355-4B8C-A25D-19576615A72C} = {69CA0BC4-71CF-41BE-B3CA-53F3FF037765}
+		{2E9BFAD6-332D-4E4A-BD84-7039A61FFEC7} = {1E776CEB-EF48-419E-9EA5-6A9E5CA1031F}
 	EndGlobalSection
 EndGlobal

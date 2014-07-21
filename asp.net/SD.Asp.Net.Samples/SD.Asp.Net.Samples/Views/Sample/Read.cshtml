@@ -1,0 +1,29 @@
+﻿@model SD.Asp.Net.Samples.Models.FileContainer
+
+@{
+    ViewBag.Title = "Read";
+    Layout = "~/Views/Shared/_CustomMasterPage.cshtml";
+}
+
+@section header{
+<h1>Header here </h1>
+    <ul>
+        <li>Header 1</li>
+        <li>Header 2</li>
+    </ul>
+
+}
+
+<div>
+    This is simple view for file @Model.Path
+</div>
+<div>
+    Lines: @Model.LeneCount
+</div>
+
+@section footer{
+    <div>
+        <p>Footer here.</p>
+    </div>    
+    }
+

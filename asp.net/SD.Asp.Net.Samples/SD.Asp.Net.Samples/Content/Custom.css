@@ -1,0 +1,20 @@
+﻿body {
+    height:100%;
+}
+
+.custom-header {
+    background-color : violet;
+}
+
+.custom-footer {
+    background-color : salmon;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+.custom-body {
+    height : auto;
+}
+
+
