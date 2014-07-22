@@ -60,7 +60,7 @@ namespace SD.Asp.Net.Samples.Controllers
 
         public ActionResult ReadFromHttp()
         {
-            System.Net.WebRequest req = System.Net.WebRequest.Create("http://localhost/SD.Asp.Net.Samples/api/sampleapi");
+            System.Net.WebRequest req = System.Net.WebRequest.Create("http://sdzyuban-pc/SD.Asp.Net.Samples/api/sampleapi");
             req.ContentType = "text/plain";
             System.Net.WebResponse resp = req.GetResponse();
             System.IO.StreamReader sr = new System.IO.StreamReader(resp.GetResponseStream());
@@ -72,7 +72,7 @@ namespace SD.Asp.Net.Samples.Controllers
         public async Task<ActionResult> AsyncReadFromHttp()
         {
             HttpClient client = new HttpClient();
-            var response = await client.GetAsync("http://localhost/SD.Asp.Net.Samples/api/sampleapi");
+            var response = await client.GetAsync("http://sdzyuban-pc/SD.Asp.Net.Samples/api/sampleapi");
             if (response.IsSuccessStatusCode)
             {
                 var content = await response.Content.ReadAsAsync<IEnumerable<string>>();
