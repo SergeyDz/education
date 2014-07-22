@@ -1,0 +1,110 @@
+<StyleCopSettings Version="105">
+<SourceFileList>
+    <SourceFile>AssemblyInfo.cs</SourceFile>
+    <Settings>
+    <GlobalSettings>
+      <BooleanProperty Name="RulesEnabledByDefault">False</BooleanProperty>
+    </GlobalSettings>
+    </Settings>
+  </SourceFileList>
+  
+  <GlobalSettings>
+    <CollectionProperty Name="RecognizedWords">
+      <Value>css</Value>
+      <Value>Csv</Value>
+      <Value>int</Value>
+      <Value>iwl</Value>
+      <Value>js</Value>
+      <Value>json</Value>
+      <Value>Mhtml</Value>
+      <Value>nrl</Value>
+      <Value>nullable</Value>
+      <Value>parameterless</Value>
+      <Value>Pdf</Value>
+      <Value>queryable</Value>
+      <Value>sql</Value>
+      <Value>Utc</Value>
+      <Value>vsd</Value>
+      <Value>xaml</Value>
+    </CollectionProperty>
+  </GlobalSettings>
+  <Parsers>
+    <Parser ParserId="StyleCop.CSharp.CsParser">
+      <ParserSettings>
+        <BooleanProperty Name="AnalyzeDesignerFiles">False</BooleanProperty>
+        <CollectionProperty Name="GeneratedFileFilters">
+          <Value>\.g\.cs$</Value>
+          <Value>\.generated\.cs$</Value>
+          <Value>\.g\.i\.cs$</Value>
+          <Value>TemporaryGeneratedFile_[0-9a-zA-Z\-]*\.cs</Value>
+        </CollectionProperty>
+      </ParserSettings>
+    </Parser>
+  </Parsers>
+  <Analyzers>
+    <Analyzer AnalyzerId="StyleCop.CSharp.DocumentationRules">
+      <Rules>
+        <Rule Name="ElementsMustBeDocumented">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="PartialElementsMustBeDocumented">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="EnumerationItemsMustBeDocumented">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings>
+        <BooleanProperty Name="IgnorePrivates">True</BooleanProperty>
+        <BooleanProperty Name="IgnoreInternals">True</BooleanProperty>
+        <BooleanProperty Name="IncludeFields">False</BooleanProperty>
+      </AnalyzerSettings>
+    </Analyzer>
+    <Analyzer AnalyzerId="StyleCop.CSharp.NamingRules">
+      <Rules>
+        <Rule Name="FieldNamesMustNotBeginWithUnderscore">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings />
+    </Analyzer>
+    <Analyzer AnalyzerId="StyleCop.CSharp.ReadabilityRules">
+      <Rules>
+        <Rule Name="PrefixLocalCallsWithThis">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="DoNotPrefixCallsWithBaseUnlessLocalImplementationExists">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="PrefixCallsCorrectly">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings />
+    </Analyzer>
+    <Analyzer AnalyzerId="StyleCop.CSharp.LayoutRules">
+      <Rules>
+        <Rule Name="AllAccessorsMustBeMultiLineOrSingleLine">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings />
+    </Analyzer>
+  </Analyzers>
+</StyleCopSettings>
