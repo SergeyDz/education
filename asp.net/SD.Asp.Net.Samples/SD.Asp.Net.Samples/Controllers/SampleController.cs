@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -56,5 +57,29 @@ namespace SD.Asp.Net.Samples.Controllers
             await file.ReadAsync();
             return View("ReadList", file);
         }
+
+        public ActionResult ReadFromHttp()
+        {
+            System.Net.WebRequest req = System.Net.WebRequest.Create("http://localhost/SD.Asp.Net.Samples/api/sampleapi");
+            req.ContentType = "text/plain";
+            System.Net.WebResponse resp = req.GetResponse();
+            System.IO.StreamReader sr = new System.IO.StreamReader(resp.GetResponseStream());
+            ViewBag.Text =  sr.ReadToEnd().Trim();
+
+            return View("Index");
+        }
+
+        public async Task<ActionResult> AsyncReadFromHttp()
+        {
+            HttpClient client = new HttpClient();
+            var response = await client.GetAsync("http://localhost/SD.Asp.Net.Samples/api/sampleapi");
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsAsync<IEnumerable<string>>();
+                ViewBag.Text = String.Join(String.Empty, content.ToArray());
+            }
+            return View("Index");
+        }
+
     }
 }

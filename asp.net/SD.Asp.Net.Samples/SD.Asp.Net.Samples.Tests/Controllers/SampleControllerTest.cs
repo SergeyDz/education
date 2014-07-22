@@ -41,5 +41,19 @@ namespace SD.Asp.Net.Samples.Tests.Controllers
             SampleController controller = new SampleController();
             ViewResult view = await controller.AsyncReadLine() as ViewResult;
         }
+
+        [TestMethod]
+        public void ReadFromHttp()
+        {
+            SampleController controller = new SampleController();
+            ViewResult view = controller.ReadFromHttp() as ViewResult;
+        }
+
+        [TestMethod]
+        public async Task AyncReadFromHttp()
+        {
+            SampleController controller = new SampleController();
+            ViewResult view = await controller.AsyncReadFromHttp() as ViewResult;
+        }
     }
 }
