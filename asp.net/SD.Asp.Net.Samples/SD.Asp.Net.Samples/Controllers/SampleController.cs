@@ -13,6 +13,7 @@ namespace SD.Asp.Net.Samples.Controllers
     public class SampleController : AsyncController
     {
         private static readonly string _testFilePath;
+        private static readonly string _testUrlPath;
 
         public static string GetBasePath()
         {
@@ -22,7 +23,9 @@ namespace SD.Asp.Net.Samples.Controllers
 
         static SampleController()
         {
-            _testFilePath = GetBasePath() + @"/Content/Uells_Voyna_mirov.fb2";  
+            _testFilePath = GetBasePath() + @"/Content/Uells_Voyna_mirov.fb2";
+            _testUrlPath = "http://sdzyuban-pc/SD.Asp.Net.Samples";
+
         }
 
         public ActionResult Index()
@@ -60,7 +63,7 @@ namespace SD.Asp.Net.Samples.Controllers
 
         public ActionResult ReadFromHttp()
         {
-            System.Net.WebRequest req = System.Net.WebRequest.Create("http://sdzyuban-pc/SD.Asp.Net.Samples/api/sampleapi");
+            System.Net.WebRequest req = System.Net.WebRequest.Create(_testUrlPath + "/api/sampleapi");
             req.ContentType = "text/plain";
             System.Net.WebResponse resp = req.GetResponse();
             System.IO.StreamReader sr = new System.IO.StreamReader(resp.GetResponseStream());
@@ -72,7 +75,7 @@ namespace SD.Asp.Net.Samples.Controllers
         public async Task<ActionResult> AsyncReadFromHttp()
         {
             HttpClient client = new HttpClient();
-            var response = await client.GetAsync("http://sdzyuban-pc/SD.Asp.Net.Samples/api/sampleapi");
+            var response = await client.GetAsync(_testUrlPath + "/api/sampleapi");
             if (response.IsSuccessStatusCode)
             {
                 var content = await response.Content.ReadAsAsync<IEnumerable<string>>();
@@ -80,6 +83,5 @@ namespace SD.Asp.Net.Samples.Controllers
             }
             return View("Index");
         }
-
     }
 }

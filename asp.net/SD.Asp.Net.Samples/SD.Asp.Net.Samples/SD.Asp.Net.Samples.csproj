@@ -44,6 +44,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -145,11 +147,30 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BusinessLogic\Services\FileContentProvider.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SampleAPIController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Common\Client.cs">
+      <DependentUpon>SDSample.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Common\SDSample.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDSample.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Common\SDSample.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDSample.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Common\SDSample.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDSample.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\FileContainer.FactoryMethod.cs" />
     <Compile Include="Models\FileContainer.ActiveRecord.cs" />
@@ -215,6 +236,23 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <EntityDeploy Include="Models\Common\SDSample.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SDSample.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Common\SDSample.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SDSample.edmx</DependentUpon>
+      <LastGenOutput>SDSample.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Common\SDSample.edmx.diagram">
+      <DependentUpon>SDSample.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Common\SDSample.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SDSample.edmx</DependentUpon>
+      <LastGenOutput>SDSample.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -266,9 +304,17 @@
     <Content Include="Views\Sample\Read.cshtml" />
     <Content Include="Views\Sample\ReadList.cshtml" />
     <Content Include="Views\Sample\FileLinePartial.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
+    <Content Include="Views\Client\Details.cshtml" />
+    <Content Include="Views\Client\Create.cshtml" />
+    <Content Include="Views\Client\Edit.cshtml" />
+    <Content Include="Views\Client\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
