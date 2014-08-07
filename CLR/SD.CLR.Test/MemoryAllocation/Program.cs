@@ -39,7 +39,7 @@ namespace MemoryAllocation
 
             h = GCHandle.Alloc(d, GCHandleType.Pinned);
             addr = h.AddrOfPinnedObject();
-            Console.WriteLine("D = " + d + " *D = " + addr.ToString("x"));
+            Console.WriteLine("D (B+C) = " + d + " *D = " + addr.ToString("x"));
 
             h.Free();
 
