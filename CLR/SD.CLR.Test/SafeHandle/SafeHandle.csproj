@@ -43,11 +43,20 @@
   <ItemGroup>
     <Compile Include="DomainModel\DisposableExample.cs" />
     <Compile Include="DomainModel\FileReaded.cs" />
+    <Compile Include="DomainModel\FileWriter.cs" />
+    <Compile Include="Lessons\Lesson02.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="Lessons\Lesson01.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CLR.Common.Contracts\CLR.Common.Contracts.csproj">
+      <Project>{3be726e9-3ec3-4146-82da-a62f4397bc2b}</Project>
+      <Name>CLR.Common.Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
