@@ -67,7 +67,7 @@ namespace TPL
 
             var t1 = Task<long>.Factory.StartNew(() => Function4());
             var t2 = Task.Factory.StartNew(() => Function3());
-            Function3();
+            await Function3();
 
             Console.WriteLine("Time 1={0}, Time 2={1}", t1.Result, t2.Result);
 

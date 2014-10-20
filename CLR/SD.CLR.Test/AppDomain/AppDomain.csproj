@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9A53AD17-9EAC-4DB8-BFAD-C12DC6375AD3}</ProjectGuid>
+    <ProjectGuid>{EBABBCAE-DEFC-4149-8180-35D47A5A90F6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TPL</RootNamespace>
-    <AssemblyName>TPL</AssemblyName>
+    <RootNamespace>AppDomain</RootNamespace>
+    <AssemblyName>AppDomain</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,16 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicExample.cs" />
-    <Compile Include="DomainModel\CustomTaskData.cs" />
+    <Compile Include="Common\AppDomainExtensions.cs" />
+    <Compile Include="Lessons\Lesson1.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Program.Functions.cs" />
-    <Compile Include="Program.Run.cs" />
-    <Compile Include="Program.AsyncState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CLR.Common.Contracts\CLR.Common.Contracts.csproj">
+      <Project>{3be726e9-3ec3-4146-82da-a62f4397bc2b}</Project>
+      <Name>CLR.Common.Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

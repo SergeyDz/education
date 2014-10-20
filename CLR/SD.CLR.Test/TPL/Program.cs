@@ -12,11 +12,16 @@ namespace TPL
     {
         public static async Task Run()
         {
-            await RunTaskParallelInvoke();
-            await RunTaskStartSimple();
-            await RunTaskWhenAll();
-            await RunTaskFunctionAssignment();
+            //await RunTaskParallelInvoke();
+            //await RunTaskStartSimple();
+            //await RunTaskWhenAll();
+            //await RunTaskFunctionAssignment();
             await RunTaskAwait();
+            //await TaskCollectionWithCustomDataLambda();
+            //await AttachToParent();
+
+            BasicExample example = new BasicExample();
+            Task.Run( () => example.Run());
         }
 
         static void Main(string[] args)
