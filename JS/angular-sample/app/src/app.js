@@ -4,7 +4,8 @@
             'ngResource',
             'ngRoute',
             'moduleControllers',
-            'appServices'
+            'appServices',
+            'ui.bootstrap'
         ]
     )
         .config(['$routeProvider', '$parseProvider', function($routeProvider, $parseProvider){
