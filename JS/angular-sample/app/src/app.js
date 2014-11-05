@@ -3,7 +3,8 @@
         [
             'ngResource',
             'ngRoute',
-            'moduleControllers'
+            'moduleControllers',
+            'appServices'
         ]
     )
         .config(['$routeProvider', '$parseProvider', function($routeProvider, $parseProvider){
@@ -25,5 +26,3 @@
 
         }]);
 })();
-
-
