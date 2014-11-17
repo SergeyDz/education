@@ -8,9 +8,11 @@
             });
         }]);
 
-    moduleControllers.controller('RepositoryController', ['$scope', '$routeParams',
-        function($scope, $routeParams) {
-            console.log('phone selected');
+    moduleControllers.controller('RepositoryController', ['$scope', '$routeParams', 'Repositories',
+        function($scope, $routeParams, Repositories) {
+            $scope.repos = Repositories.get({user: $routeParams.user}, function(data) {
+                $scope.repos = data;
+            });
         }]);
 
 })();
