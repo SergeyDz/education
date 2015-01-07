@@ -1,29 +1,27 @@
-(function() {
-    angular.module('sampleApp',
-        [
+(function(app) {
+    angular.module('sampleApp', [
             'ngResource',
             'ngRoute',
-            'moduleControllers',
-            'appServices',
+            'ui.router',
+            'UserCtrl',
+            'RepositoryCtrl',
             'ui.bootstrap'
-        ]
-    )
-        .config(['$routeProvider', '$parseProvider', function($routeProvider, $parseProvider){
-            $routeProvider.
-                when('/user/:user', {
+        ])
+        .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+            $urlRouterProvider.otherwise('/user/SergeyDz');
+
+            $stateProvider
+                .state('user', {
+                    url: '/user/:user',
                     templateUrl: 'views/user.html',
-                    controller: 'UserController'
-                }).
-                when('/user/:user/repository', {
+                    controller: 'UserCtrl'
+                })
+                .state('user.repository', {
+                    parent: 'user',
+                    url: '/repository',
                     templateUrl: 'views/repository.html',
-                    controller: 'RepositoryController'
-                }).
-                otherwise({
-                    redirectTo: '/user/SergeyDz'
+                    controller: 'RepositoryCtrl'
                 });
 
-            //this line allow to use promises as ng-optionn attribute. Sine 1.2 this feature was disabled. This line enable it.
-            $parseProvider.unwrapPromises(true);
-
         }]);
-})();
+})(SD.App);
