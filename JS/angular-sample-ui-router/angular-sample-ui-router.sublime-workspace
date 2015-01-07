@@ -1,0 +1,486 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"h",
+				"h4	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 1560,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/bootstrap.js",
+			"settings":
+			{
+				"buffer_size": 29,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/app.js",
+			"settings":
+			{
+				"buffer_size": 869,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/controllers/UserCtrl.js",
+			"settings":
+			{
+				"buffer_size": 400,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/controllers/RepositoryCtrl.js",
+			"settings":
+			{
+				"buffer_size": 439,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/user.html",
+			"settings":
+			{
+				"buffer_size": 360,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/repository.html",
+			"settings":
+			{
+				"buffer_size": 141,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"git",
+				"Git: Gui"
+			],
+			[
+				"Prety",
+				"HTMLPrettify"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"view",
+				"View In Browser"
+			],
+			[
+				"git c	",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"git ad",
+				"Git: Add..."
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ma",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"Ma",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"Mar",
+				"Markdown Preview: Export HTML in Sublime Text"
+			],
+			[
+				"Pack",
+				"Package Control: List Packages"
+			],
+			[
+				"Pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Ins	",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"gith",
+				"Github: Repository"
+			],
+			[
+				"Package Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ins ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/views/view01.html",
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/views/view02.html",
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/src/testController.js",
+		"/C/Users/Sergey/AppData/Roaming/Sublime Text 2/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/Sergey/AppData/Roaming/Sublime Text 2/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/src/app.js",
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/package.json",
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/bower.json",
+		"/C/Users/Sergey/AppData/Roaming/Sublime Text 2/Packages/User/Github Tools.sublime-settings",
+		"/C/Home/Sergey/Dropbox/Documents/.Temp/2014.12.28/index.html",
+		"/C/Users/Sergey/AppData/Roaming/Sublime Text 2/Packages/AngularJS/AngularJS-sublime-package.sublime-settings",
+		"/C/Projects/hg/intake/DatabaseScripts/OpenDbInstall.sql"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/index.html",
+					"settings":
+					{
+						"buffer_size": 1560,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1215,
+								1215
+							]
+						],
+						"settings":
+						{
+							"parser": "github",
+							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
+							"target": "browser"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/src/bootstrap.js",
+					"settings":
+					{
+						"buffer_size": 29,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								28
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/src/app.js",
+					"settings":
+					{
+						"buffer_size": 869,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								868,
+								868
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/src/controllers/UserCtrl.js",
+					"settings":
+					{
+						"buffer_size": 400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								347,
+								351
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/src/controllers/RepositoryCtrl.js",
+					"settings":
+					{
+						"buffer_size": 439,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								439,
+								439
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/user.html",
+					"settings":
+					{
+						"buffer_size": 360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								353,
+								353
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/repository.html",
+					"settings":
+					{
+						"buffer_size": 141,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								67,
+								67
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/AngularJS/AngularJS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 276.0,
+	"status_bar_visible": true
+}
