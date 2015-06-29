@@ -1,0 +1,8 @@
+{
+	"devDependencies": {
+		"cucumber": "latest", 
+		"selenium-webdriver": "latest",
+		"chromedriver": "latest",
+		"chai" : "latest"
+	}
+}
