@@ -50,6 +50,12 @@ build/
 [Bb]in/
 [Oo]bj/
 
+# Ignore nuget packages
+packages/
+
+# Ignore npm modules
+node_modules/
+
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
