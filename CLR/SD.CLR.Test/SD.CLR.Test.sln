@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.CLR.ArrayTestProject", "SD.CLR.ArrayTestProject\SD.CLR.ArrayTestProject.csproj", "{D4A521DD-93F8-45B3-83B5-6E4F01D10EDF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryAllocation", "MemoryAllocation\MemoryAllocation.csproj", "{9E87F05C-BEB3-405F-85B3-05F7D8E55EB5}"
@@ -20,6 +22,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLR.Common.Contracts", "CLR.Common.Contracts\CLR.Common.Contracts.csproj", "{3BE726E9-3EC3-4146-82DA-A62F4397BC2B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafeHandle", "SafeHandle\SafeHandle.csproj", "{EDACEADC-452F-487D-91B4-5D217BFDE93C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{AAD7EC63-3A35-4F09-A4BD-9198436F17CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{08413489-B91A-4ADE-9AF4-7E71771C9F99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.Specs", "TestProject.Specs\TestProject.Specs.csproj", "{7757FE4C-C4B2-4804-BC2B-9CA4BE6D701F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,11 +71,19 @@ Global
 		{EDACEADC-452F-487D-91B4-5D217BFDE93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDACEADC-452F-487D-91B4-5D217BFDE93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDACEADC-452F-487D-91B4-5D217BFDE93C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7757FE4C-C4B2-4804-BC2B-9CA4BE6D701F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7757FE4C-C4B2-4804-BC2B-9CA4BE6D701F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7757FE4C-C4B2-4804-BC2B-9CA4BE6D701F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7757FE4C-C4B2-4804-BC2B-9CA4BE6D701F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3BE726E9-3EC3-4146-82DA-A62F4397BC2B} = {3C35F7BF-A461-4D02-BDF5-48ADD1B04952}
+		{7757FE4C-C4B2-4804-BC2B-9CA4BE6D701F} = {AAD7EC63-3A35-4F09-A4BD-9198436F17CC}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

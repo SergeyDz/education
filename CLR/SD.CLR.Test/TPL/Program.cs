@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CLR.Common.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -16,17 +17,23 @@ namespace TPL
             //await RunTaskStartSimple();
             //await RunTaskWhenAll();
             //await RunTaskFunctionAssignment();
-            await RunTaskAwait();
+            //await RunTaskAwait();
             //await TaskCollectionWithCustomDataLambda();
             //await AttachToParent();
 
-            BasicExample example = new BasicExample();
-            Task.Run( () => example.Run());
+            //BasicExample example = new BasicExample();
+            //Task.Run( () => example.Run());
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+            var command = new Lessons.Lesson04();
+            await command.Execute();
+            watch.Stop();
+            Console.WriteLine("================= Total time: {0} =======================", watch.Elapsed);
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Current Thread #: {0}", Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Thread:{0}.    | Start", Thread.CurrentThread.ManagedThreadId);
 
             Run();
             //Console.WriteLine(Task.Factory.Scheduler.MaximumConcurrencyLevel);
