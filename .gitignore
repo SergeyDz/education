@@ -56,6 +56,8 @@ packages/
 # Ignore npm modules
 node_modules/
 
+iisnode/
+
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
