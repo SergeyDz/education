@@ -5,23 +5,31 @@
             'ui.router',
             'UserCtrl',
             'RepositoryCtrl',
+            'ChatCtrl',
             'ui.bootstrap'
         ])
         .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/user/SergeyDz');
 
             $stateProvider
-                .state('user', {
-                    url: '/user/:user',
+                .state('area', {
+                    url: '/:area/:user',
                     templateUrl: 'views/user.html',
                     controller: 'UserCtrl'
                 })
-                .state('user.repository', {
-                    parent: 'user',
-                    url: '/repository',
+                .state('area.repos', {
+                    parent: 'area',
+                    url: '/repos',
                     templateUrl: 'views/repository.html',
                     controller: 'RepositoryCtrl'
-                });
+                })
+                .state('area.chat', {
+                    parent: 'area',
+                    url: '/chat',
+                    templateUrl: 'views/chat.html',
+                    controller: 'ChatCtrl'
+                })
+                ;
 
         }]);
 })(SD.App);

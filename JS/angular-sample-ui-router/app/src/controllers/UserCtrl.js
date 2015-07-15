@@ -8,6 +8,9 @@
             }, function(data) {
                 $scope.user = data;
             });
+
+
+            
         }
     ]);
 })();

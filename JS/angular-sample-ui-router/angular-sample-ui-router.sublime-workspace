@@ -12,58 +12,18 @@
 	"buffers":
 	[
 		{
-			"file": "app/index.html",
+			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 1560,
+				"buffer_size": 1164,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/src/bootstrap.js",
+			"file": "bower.json",
 			"settings":
 			{
-				"buffer_size": 29,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/src/app.js",
-			"settings":
-			{
-				"buffer_size": 869,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/src/controllers/UserCtrl.js",
-			"settings":
-			{
-				"buffer_size": 400,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/src/controllers/RepositoryCtrl.js",
-			"settings":
-			{
-				"buffer_size": 439,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/user.html",
-			"settings":
-			{
-				"buffer_size": 360,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/repository.html",
-			"settings":
-			{
-				"buffer_size": 141,
+				"buffer_size": 658,
 				"line_ending": "Windows"
 			}
 		}
@@ -172,12 +132,18 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/index.html",
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/src/bootstrap.js",
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/src/app.js",
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/src/controllers/UserCtrl.js",
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/src/controllers/RepositoryCtrl.js",
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/views/user.html",
+		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/views/repository.html",
 		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/views/view01.html",
 		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/views/view02.html",
 		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/src/testController.js",
 		"/C/Users/Sergey/AppData/Roaming/Sublime Text 2/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
 		"/C/Users/Sergey/AppData/Roaming/Sublime Text 2/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
-		"/C/Projects/git/Education/JS/angular-sample-ui-router/app/src/app.js",
 		"/C/Projects/git/Education/JS/angular-sample-ui-router/package.json",
 		"/C/Projects/git/Education/JS/angular-sample-ui-router/bower.json",
 		"/C/Users/Sergey/AppData/Roaming/Sublime Text 2/Packages/User/Github Tools.sublime-settings",
@@ -218,30 +184,30 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/index.html",
+					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 1560,
+						"buffer_size": 1164,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1215,
-								1215
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"parser": "github",
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
-							"target": "browser"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -251,162 +217,25 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/src/bootstrap.js",
+					"file": "bower.json",
 					"settings":
 					{
-						"buffer_size": 29,
+						"buffer_size": 658,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								28,
-								28
+								459,
+								492
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/src/app.js",
-					"settings":
-					{
-						"buffer_size": 869,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								868,
-								868
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/src/controllers/UserCtrl.js",
-					"settings":
-					{
-						"buffer_size": 400,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								347,
-								351
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/src/controllers/RepositoryCtrl.js",
-					"settings":
-					{
-						"buffer_size": 439,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								439,
-								439
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/user.html",
-					"settings":
-					{
-						"buffer_size": 360,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								353,
-								353
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/views/repository.html",
-					"settings":
-					{
-						"buffer_size": 141,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								67,
-								67
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

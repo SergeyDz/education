@@ -1,21 +1,38 @@
-(function(){
+(function(app) {
 
-    var appServices = angular.module('appServices',
-        ['ngResource']
-    );
+    var appServices = angular.module('appServices', ['ngResource']);
 
     appServices.factory('User', ['$resource',
-        function($resource){
+        function($resource) {
             return $resource('https://api.github.com/users/:user', {}, {
-                get: {method:'GET', isArray:false}
+                get: {
+                    method: 'GET',
+                    isArray: false
+                }
             });
-        }]);
+        }
+    ]);
 
     appServices.factory('Repositories', ['$resource',
-        function($resource){
+        function($resource) {
             return $resource('https://api.github.com/users/:user/repos', {}, {
-                get: {method:'GET', isArray:true}
+                get: {
+                    method: 'GET',
+                    isArray: true
+                }
             });
-        }]);
+        }
+    ]);
 
-})();
+     appServices.factory('Chat', ['$resource',
+        function($resource) {
+            return $resource('https://api.github.com/users/:user/repos', {}, {
+                get: {
+                    method: 'GET',
+                    isArray: true
+                }
+            });
+        }
+    ]);
+
+})(SD.App);
