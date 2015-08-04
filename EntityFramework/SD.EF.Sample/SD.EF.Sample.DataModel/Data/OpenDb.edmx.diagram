@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f22f8a7aae024f88ad1830b3a624bffb" Name="Diagram1">
+        <EntityTypeShape EntityType="OpenDbModel.TermCategory" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermDataColumnType" Width="1.5" PointX="3" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermDefinitionProperty" Width="1.5" PointX="7.5" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermDefinitionPropertyImportanceLevel" Width="1.5" PointX="5.25" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermDefinitionPropertyType" Width="1.5" PointX="5.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermDefinition" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermDocumentOrigin" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermDocument" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermDocumentScope" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermDocumentStatus" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermDocumentType" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermPropertyUnit" Width="1.5" PointX="7.5" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermPropertyValue" Width="1.5" PointX="9.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermPropertyValueToComponent" Width="1.5" PointX="12" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.Term" Width="1.5" PointX="7.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OpenDbModel.TermStatus" Width="1.5" PointX="5.25" PointY="14.75" IsExpanded="true" />
+        <AssociationConnector Association="OpenDbModel.FK_TermCategories_ParentId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermDefinitions_CategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermDefinitionPropertyTypes_DataColumn" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermDefinitionProperties_DefinitionId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermDefinitionProperties_TermDefinitionPropertyImportanceLevels" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermDefinitionProperties_TypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermPropertyValues_PropertyId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermPropertyUnits_TypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_Terms_DefinitionId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermDocumentTypes_OriginId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermDocuments_ParentId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermDocuments_TermDocumentStatusesId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermDocuments_TermDocumentTypesId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_Terms_TermDocuments" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermDocumentTypes_ScopeId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermPropertyValues_PropertyUnitId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermPropertyValues_TermId" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_TermPropertyValueToComponents_TermPropertyValues" ManuallyRouted="false" />
+        <AssociationConnector Association="OpenDbModel.FK_Terms_StatusId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
