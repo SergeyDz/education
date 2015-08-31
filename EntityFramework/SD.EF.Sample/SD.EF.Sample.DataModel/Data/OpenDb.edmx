@@ -1,0 +1,1283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OpenDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="OpenDbModelStoreContainer">
+          <EntitySet Name="TermCategories" EntityType="OpenDbModel.Store.TermCategories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermDataColumnType" EntityType="OpenDbModel.Store.TermDataColumnType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermDefinitionProperties" EntityType="OpenDbModel.Store.TermDefinitionProperties" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermDefinitionPropertyImportanceLevels" EntityType="OpenDbModel.Store.TermDefinitionPropertyImportanceLevels" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermDefinitionPropertyTypes" EntityType="OpenDbModel.Store.TermDefinitionPropertyTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermDefinitions" EntityType="OpenDbModel.Store.TermDefinitions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermDocumentOrigins" EntityType="OpenDbModel.Store.TermDocumentOrigins" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermDocuments" EntityType="OpenDbModel.Store.TermDocuments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermDocumentScope" EntityType="OpenDbModel.Store.TermDocumentScope" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermDocumentStatuses" EntityType="OpenDbModel.Store.TermDocumentStatuses" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermDocumentTypes" EntityType="OpenDbModel.Store.TermDocumentTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermPropertyUnits" EntityType="OpenDbModel.Store.TermPropertyUnits" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermPropertyValues" EntityType="OpenDbModel.Store.TermPropertyValues" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermPropertyValueToComponents" EntityType="OpenDbModel.Store.TermPropertyValueToComponents" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Terms" EntityType="OpenDbModel.Store.Terms" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TermStatuses" EntityType="OpenDbModel.Store.TermStatuses" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_TermCategories_ParentId" Association="OpenDbModel.Store.FK_TermCategories_ParentId">
+            <End Role="TermCategories" EntitySet="TermCategories" />
+            <End Role="TermCategories1" EntitySet="TermCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDefinitionProperties_DefinitionId" Association="OpenDbModel.Store.FK_TermDefinitionProperties_DefinitionId">
+            <End Role="TermDefinitions" EntitySet="TermDefinitions" />
+            <End Role="TermDefinitionProperties" EntitySet="TermDefinitionProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDefinitionProperties_TermDefinitionPropertyImportanceLevels" Association="OpenDbModel.Store.FK_TermDefinitionProperties_TermDefinitionPropertyImportanceLevels">
+            <End Role="TermDefinitionPropertyImportanceLevels" EntitySet="TermDefinitionPropertyImportanceLevels" />
+            <End Role="TermDefinitionProperties" EntitySet="TermDefinitionProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDefinitionProperties_TypeId" Association="OpenDbModel.Store.FK_TermDefinitionProperties_TypeId">
+            <End Role="TermDefinitionPropertyTypes" EntitySet="TermDefinitionPropertyTypes" />
+            <End Role="TermDefinitionProperties" EntitySet="TermDefinitionProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDefinitionPropertyTypes_DataColumn" Association="OpenDbModel.Store.FK_TermDefinitionPropertyTypes_DataColumn">
+            <End Role="TermDataColumnType" EntitySet="TermDataColumnType" />
+            <End Role="TermDefinitionPropertyTypes" EntitySet="TermDefinitionPropertyTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDefinitions_CategoryId" Association="OpenDbModel.Store.FK_TermDefinitions_CategoryId">
+            <End Role="TermCategories" EntitySet="TermCategories" />
+            <End Role="TermDefinitions" EntitySet="TermDefinitions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDocuments_ParentId" Association="OpenDbModel.Store.FK_TermDocuments_ParentId">
+            <End Role="TermDocuments" EntitySet="TermDocuments" />
+            <End Role="TermDocuments1" EntitySet="TermDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDocuments_TermDocumentStatusesId" Association="OpenDbModel.Store.FK_TermDocuments_TermDocumentStatusesId">
+            <End Role="TermDocumentStatuses" EntitySet="TermDocumentStatuses" />
+            <End Role="TermDocuments" EntitySet="TermDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDocuments_TermDocumentTypesId" Association="OpenDbModel.Store.FK_TermDocuments_TermDocumentTypesId">
+            <End Role="TermDocumentTypes" EntitySet="TermDocumentTypes" />
+            <End Role="TermDocuments" EntitySet="TermDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDocumentTypes_OriginId" Association="OpenDbModel.Store.FK_TermDocumentTypes_OriginId">
+            <End Role="TermDocumentOrigins" EntitySet="TermDocumentOrigins" />
+            <End Role="TermDocumentTypes" EntitySet="TermDocumentTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDocumentTypes_ScopeId" Association="OpenDbModel.Store.FK_TermDocumentTypes_ScopeId">
+            <End Role="TermDocumentScope" EntitySet="TermDocumentScope" />
+            <End Role="TermDocumentTypes" EntitySet="TermDocumentTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermPropertyUnits_TypeId" Association="OpenDbModel.Store.FK_TermPropertyUnits_TypeId">
+            <End Role="TermDefinitionPropertyTypes" EntitySet="TermDefinitionPropertyTypes" />
+            <End Role="TermPropertyUnits" EntitySet="TermPropertyUnits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermPropertyValues_PropertyId" Association="OpenDbModel.Store.FK_TermPropertyValues_PropertyId">
+            <End Role="TermDefinitionProperties" EntitySet="TermDefinitionProperties" />
+            <End Role="TermPropertyValues" EntitySet="TermPropertyValues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermPropertyValues_PropertyUnitId" Association="OpenDbModel.Store.FK_TermPropertyValues_PropertyUnitId">
+            <End Role="TermPropertyUnits" EntitySet="TermPropertyUnits" />
+            <End Role="TermPropertyValues" EntitySet="TermPropertyValues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermPropertyValues_TermId" Association="OpenDbModel.Store.FK_TermPropertyValues_TermId">
+            <End Role="Terms" EntitySet="Terms" />
+            <End Role="TermPropertyValues" EntitySet="TermPropertyValues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermPropertyValueToComponents_TermPropertyValues" Association="OpenDbModel.Store.FK_TermPropertyValueToComponents_TermPropertyValues">
+            <End Role="TermPropertyValues" EntitySet="TermPropertyValues" />
+            <End Role="TermPropertyValueToComponents" EntitySet="TermPropertyValueToComponents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Terms_DefinitionId" Association="OpenDbModel.Store.FK_Terms_DefinitionId">
+            <End Role="TermDefinitions" EntitySet="TermDefinitions" />
+            <End Role="Terms" EntitySet="Terms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Terms_StatusId" Association="OpenDbModel.Store.FK_Terms_StatusId">
+            <End Role="TermStatuses" EntitySet="TermStatuses" />
+            <End Role="Terms" EntitySet="Terms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Terms_TermDocuments" Association="OpenDbModel.Store.FK_Terms_TermDocuments">
+            <End Role="TermDocuments" EntitySet="TermDocuments" />
+            <End Role="Terms" EntitySet="Terms" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="TermCategories">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Parent_Id" Type="int" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="ParentCategories" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="TermDataColumnType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="TermDefinitionProperties">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Definition_Id" Type="int" Nullable="false" />
+          <Property Name="Type_Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="ImportanceLevel" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TermDefinitionPropertyImportanceLevels">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="TermDefinitionPropertyTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="DataColumn" Type="int" />
+          <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="ConfigurableUnits" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TermDefinitions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Category_Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="ShortForm" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="LongForm" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Required" Type="bit" Nullable="false" />
+          <Property Name="Default" Type="bit" Nullable="false" />
+          <Property Name="KeyTerm" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TermDocumentOrigins">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="TermDocuments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="FileName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Hash" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="Status_Id" Type="int" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy_Id" Type="int" Nullable="false" />
+          <Property Name="LastModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="LastModifiedBy_Id" Type="int" Nullable="false" />
+          <Property Name="EffectiveOn" Type="datetime" />
+          <Property Name="ExpiredOn" Type="datetime" />
+          <Property Name="Type_Id" Type="int" />
+          <Property Name="Client_Id" Type="int" />
+          <Property Name="Matter_Id" Type="int" />
+          <Property Name="Component_Id" Type="int" Nullable="false" />
+          <Property Name="Reference" Type="bit" Nullable="false" />
+          <Property Name="Version" Type="nvarchar" MaxLength="50" />
+          <Property Name="Parent_Id" Type="int" />
+          <Property Name="NotificationSent" Type="bit" Nullable="false" />
+          <Property Name="ExcludeSubsidiaries" Type="bit" Nullable="false" />
+          <Property Name="SourceContentId" Type="uniqueidentifier" />
+          <Property Name="PdfContentId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="TermDocumentScope">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="TermDocumentStatuses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="TermDocumentTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Origin_Id" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Scope_Id" Type="int" />
+          <Property Name="Reference" Type="bit" Nullable="false" />
+          <Property Name="Required" Type="bit" Nullable="false" />
+          <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="TermPropertyUnits">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="Type_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TermPropertyValues">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Property_Id" Type="int" Nullable="false" />
+          <Property Name="Term_Id" Type="int" />
+          <Property Name="OriginalValue" Type="nvarchar" MaxLength="256" />
+          <Property Name="IntValue" Type="int" />
+          <Property Name="DecimalValue" Type="decimal" Scale="3" />
+          <Property Name="DateValue" Type="datetime" />
+          <Property Name="PropertyUnit_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="TermPropertyValueToComponents">
+          <Key>
+            <PropertyRef Name="TermPropertyValue_Id" />
+            <PropertyRef Name="Component_Id" />
+          </Key>
+          <Property Name="TermPropertyValue_Id" Type="int" Nullable="false" />
+          <Property Name="Component_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Terms">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Definition_Id" Type="int" />
+          <Property Name="Document_Id" Type="int" Nullable="false" />
+          <Property Name="Component_Id" Type="int" Nullable="false" />
+          <Property Name="Positions" Type="nvarchar(max)" />
+          <Property Name="EffectiveOn" Type="datetime" />
+          <Property Name="ExpiredOn" Type="datetime" />
+          <Property Name="NegotiationStatus_Id" Type="int" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="512" />
+          <Property Name="Status_Id" Type="int" Nullable="false" />
+          <Property Name="Overridden" Type="bit" Nullable="false" />
+          <Property Name="Atypical" Type="bit" Nullable="false" />
+          <Property Name="StatusChangeDate" Type="date" />
+        </EntityType>
+        <EntityType Name="TermStatuses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <Association Name="FK_TermCategories_ParentId">
+          <End Role="TermCategories" Type="OpenDbModel.Store.TermCategories" Multiplicity="0..1" />
+          <End Role="TermCategories1" Type="OpenDbModel.Store.TermCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermCategories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermCategories1">
+              <PropertyRef Name="Parent_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDefinitionProperties_DefinitionId">
+          <End Role="TermDefinitions" Type="OpenDbModel.Store.TermDefinitions" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TermDefinitionProperties" Type="OpenDbModel.Store.TermDefinitionProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDefinitionProperties">
+              <PropertyRef Name="Definition_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDefinitionProperties_TermDefinitionPropertyImportanceLevels">
+          <End Role="TermDefinitionPropertyImportanceLevels" Type="OpenDbModel.Store.TermDefinitionPropertyImportanceLevels" Multiplicity="1" />
+          <End Role="TermDefinitionProperties" Type="OpenDbModel.Store.TermDefinitionProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitionPropertyImportanceLevels">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDefinitionProperties">
+              <PropertyRef Name="ImportanceLevel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDefinitionProperties_TypeId">
+          <End Role="TermDefinitionPropertyTypes" Type="OpenDbModel.Store.TermDefinitionPropertyTypes" Multiplicity="1" />
+          <End Role="TermDefinitionProperties" Type="OpenDbModel.Store.TermDefinitionProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitionPropertyTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDefinitionProperties">
+              <PropertyRef Name="Type_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDefinitionPropertyTypes_DataColumn">
+          <End Role="TermDataColumnType" Type="OpenDbModel.Store.TermDataColumnType" Multiplicity="0..1" />
+          <End Role="TermDefinitionPropertyTypes" Type="OpenDbModel.Store.TermDefinitionPropertyTypes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDataColumnType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDefinitionPropertyTypes">
+              <PropertyRef Name="DataColumn" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDefinitions_CategoryId">
+          <End Role="TermCategories" Type="OpenDbModel.Store.TermCategories" Multiplicity="1" />
+          <End Role="TermDefinitions" Type="OpenDbModel.Store.TermDefinitions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermCategories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDefinitions">
+              <PropertyRef Name="Category_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDocuments_ParentId">
+          <End Role="TermDocuments" Type="OpenDbModel.Store.TermDocuments" Multiplicity="0..1" />
+          <End Role="TermDocuments1" Type="OpenDbModel.Store.TermDocuments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocuments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDocuments1">
+              <PropertyRef Name="Parent_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDocuments_TermDocumentStatusesId">
+          <End Role="TermDocumentStatuses" Type="OpenDbModel.Store.TermDocumentStatuses" Multiplicity="1" />
+          <End Role="TermDocuments" Type="OpenDbModel.Store.TermDocuments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocumentStatuses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDocuments">
+              <PropertyRef Name="Status_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDocuments_TermDocumentTypesId">
+          <End Role="TermDocumentTypes" Type="OpenDbModel.Store.TermDocumentTypes" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TermDocuments" Type="OpenDbModel.Store.TermDocuments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocumentTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDocuments">
+              <PropertyRef Name="Type_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDocumentTypes_OriginId">
+          <End Role="TermDocumentOrigins" Type="OpenDbModel.Store.TermDocumentOrigins" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TermDocumentTypes" Type="OpenDbModel.Store.TermDocumentTypes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocumentOrigins">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDocumentTypes">
+              <PropertyRef Name="Origin_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDocumentTypes_ScopeId">
+          <End Role="TermDocumentScope" Type="OpenDbModel.Store.TermDocumentScope" Multiplicity="0..1" />
+          <End Role="TermDocumentTypes" Type="OpenDbModel.Store.TermDocumentTypes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocumentScope">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDocumentTypes">
+              <PropertyRef Name="Scope_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermPropertyUnits_TypeId">
+          <End Role="TermDefinitionPropertyTypes" Type="OpenDbModel.Store.TermDefinitionPropertyTypes" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TermPropertyUnits" Type="OpenDbModel.Store.TermPropertyUnits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitionPropertyTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermPropertyUnits">
+              <PropertyRef Name="Type_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermPropertyValues_PropertyId">
+          <End Role="TermDefinitionProperties" Type="OpenDbModel.Store.TermDefinitionProperties" Multiplicity="1" />
+          <End Role="TermPropertyValues" Type="OpenDbModel.Store.TermPropertyValues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitionProperties">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermPropertyValues">
+              <PropertyRef Name="Property_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermPropertyValues_PropertyUnitId">
+          <End Role="TermPropertyUnits" Type="OpenDbModel.Store.TermPropertyUnits" Multiplicity="0..1" />
+          <End Role="TermPropertyValues" Type="OpenDbModel.Store.TermPropertyValues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermPropertyUnits">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermPropertyValues">
+              <PropertyRef Name="PropertyUnit_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermPropertyValues_TermId">
+          <End Role="Terms" Type="OpenDbModel.Store.Terms" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TermPropertyValues" Type="OpenDbModel.Store.TermPropertyValues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Terms">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermPropertyValues">
+              <PropertyRef Name="Term_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermPropertyValueToComponents_TermPropertyValues">
+          <End Role="TermPropertyValues" Type="OpenDbModel.Store.TermPropertyValues" Multiplicity="1" />
+          <End Role="TermPropertyValueToComponents" Type="OpenDbModel.Store.TermPropertyValueToComponents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermPropertyValues">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermPropertyValueToComponents">
+              <PropertyRef Name="TermPropertyValue_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Terms_DefinitionId">
+          <End Role="TermDefinitions" Type="OpenDbModel.Store.TermDefinitions" Multiplicity="0..1" />
+          <End Role="Terms" Type="OpenDbModel.Store.Terms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Terms">
+              <PropertyRef Name="Definition_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Terms_StatusId">
+          <End Role="TermStatuses" Type="OpenDbModel.Store.TermStatuses" Multiplicity="1" />
+          <End Role="Terms" Type="OpenDbModel.Store.Terms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermStatuses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Terms">
+              <PropertyRef Name="Status_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Terms_TermDocuments">
+          <End Role="TermDocuments" Type="OpenDbModel.Store.TermDocuments" Multiplicity="1" />
+          <End Role="Terms" Type="OpenDbModel.Store.Terms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocuments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Terms">
+              <PropertyRef Name="Document_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OpenDbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="OpenDbEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="TermCategories" EntityType="OpenDbModel.TermCategory" />
+          <EntitySet Name="TermDataColumnTypes" EntityType="OpenDbModel.TermDataColumnType" />
+          <EntitySet Name="TermDefinitionProperties" EntityType="OpenDbModel.TermDefinitionProperty" />
+          <EntitySet Name="TermDefinitionPropertyImportanceLevels" EntityType="OpenDbModel.TermDefinitionPropertyImportanceLevel" />
+          <EntitySet Name="TermDefinitionPropertyTypes" EntityType="OpenDbModel.TermDefinitionPropertyType" />
+          <EntitySet Name="TermDefinitions" EntityType="OpenDbModel.TermDefinition" />
+          <EntitySet Name="TermDocumentOrigins" EntityType="OpenDbModel.TermDocumentOrigin" />
+          <EntitySet Name="TermDocuments" EntityType="OpenDbModel.TermDocument" />
+          <EntitySet Name="TermDocumentScopes" EntityType="OpenDbModel.TermDocumentScope" />
+          <EntitySet Name="TermDocumentStatuses" EntityType="OpenDbModel.TermDocumentStatus" />
+          <EntitySet Name="TermDocumentTypes" EntityType="OpenDbModel.TermDocumentType" />
+          <EntitySet Name="TermPropertyUnits" EntityType="OpenDbModel.TermPropertyUnit" />
+          <EntitySet Name="TermPropertyValues" EntityType="OpenDbModel.TermPropertyValue" />
+          <EntitySet Name="TermPropertyValueToComponents" EntityType="OpenDbModel.TermPropertyValueToComponent" />
+          <EntitySet Name="Terms" EntityType="OpenDbModel.Term" />
+          <EntitySet Name="TermStatuses" EntityType="OpenDbModel.TermStatus" />
+          <AssociationSet Name="FK_TermCategories_ParentId" Association="OpenDbModel.FK_TermCategories_ParentId">
+            <End Role="TermCategories" EntitySet="TermCategories" />
+            <End Role="TermCategories1" EntitySet="TermCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDefinitions_CategoryId" Association="OpenDbModel.FK_TermDefinitions_CategoryId">
+            <End Role="TermCategories" EntitySet="TermCategories" />
+            <End Role="TermDefinitions" EntitySet="TermDefinitions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDefinitionPropertyTypes_DataColumn" Association="OpenDbModel.FK_TermDefinitionPropertyTypes_DataColumn">
+            <End Role="TermDataColumnType" EntitySet="TermDataColumnTypes" />
+            <End Role="TermDefinitionPropertyTypes" EntitySet="TermDefinitionPropertyTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDefinitionProperties_DefinitionId" Association="OpenDbModel.FK_TermDefinitionProperties_DefinitionId">
+            <End Role="TermDefinitions" EntitySet="TermDefinitions" />
+            <End Role="TermDefinitionProperties" EntitySet="TermDefinitionProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDefinitionProperties_TermDefinitionPropertyImportanceLevels" Association="OpenDbModel.FK_TermDefinitionProperties_TermDefinitionPropertyImportanceLevels">
+            <End Role="TermDefinitionPropertyImportanceLevels" EntitySet="TermDefinitionPropertyImportanceLevels" />
+            <End Role="TermDefinitionProperties" EntitySet="TermDefinitionProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDefinitionProperties_TypeId" Association="OpenDbModel.FK_TermDefinitionProperties_TypeId">
+            <End Role="TermDefinitionPropertyTypes" EntitySet="TermDefinitionPropertyTypes" />
+            <End Role="TermDefinitionProperties" EntitySet="TermDefinitionProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermPropertyValues_PropertyId" Association="OpenDbModel.FK_TermPropertyValues_PropertyId">
+            <End Role="TermDefinitionProperties" EntitySet="TermDefinitionProperties" />
+            <End Role="TermPropertyValues" EntitySet="TermPropertyValues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermPropertyUnits_TypeId" Association="OpenDbModel.FK_TermPropertyUnits_TypeId">
+            <End Role="TermDefinitionPropertyTypes" EntitySet="TermDefinitionPropertyTypes" />
+            <End Role="TermPropertyUnits" EntitySet="TermPropertyUnits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Terms_DefinitionId" Association="OpenDbModel.FK_Terms_DefinitionId">
+            <End Role="TermDefinitions" EntitySet="TermDefinitions" />
+            <End Role="Terms" EntitySet="Terms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDocumentTypes_OriginId" Association="OpenDbModel.FK_TermDocumentTypes_OriginId">
+            <End Role="TermDocumentOrigins" EntitySet="TermDocumentOrigins" />
+            <End Role="TermDocumentTypes" EntitySet="TermDocumentTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDocuments_ParentId" Association="OpenDbModel.FK_TermDocuments_ParentId">
+            <End Role="TermDocuments" EntitySet="TermDocuments" />
+            <End Role="TermDocuments1" EntitySet="TermDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDocuments_TermDocumentStatusesId" Association="OpenDbModel.FK_TermDocuments_TermDocumentStatusesId">
+            <End Role="TermDocumentStatuses" EntitySet="TermDocumentStatuses" />
+            <End Role="TermDocuments" EntitySet="TermDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDocuments_TermDocumentTypesId" Association="OpenDbModel.FK_TermDocuments_TermDocumentTypesId">
+            <End Role="TermDocumentTypes" EntitySet="TermDocumentTypes" />
+            <End Role="TermDocuments" EntitySet="TermDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Terms_TermDocuments" Association="OpenDbModel.FK_Terms_TermDocuments">
+            <End Role="TermDocuments" EntitySet="TermDocuments" />
+            <End Role="Terms" EntitySet="Terms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermDocumentTypes_ScopeId" Association="OpenDbModel.FK_TermDocumentTypes_ScopeId">
+            <End Role="TermDocumentScope" EntitySet="TermDocumentScopes" />
+            <End Role="TermDocumentTypes" EntitySet="TermDocumentTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermPropertyValues_PropertyUnitId" Association="OpenDbModel.FK_TermPropertyValues_PropertyUnitId">
+            <End Role="TermPropertyUnits" EntitySet="TermPropertyUnits" />
+            <End Role="TermPropertyValues" EntitySet="TermPropertyValues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermPropertyValues_TermId" Association="OpenDbModel.FK_TermPropertyValues_TermId">
+            <End Role="Terms" EntitySet="Terms" />
+            <End Role="TermPropertyValues" EntitySet="TermPropertyValues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TermPropertyValueToComponents_TermPropertyValues" Association="OpenDbModel.FK_TermPropertyValueToComponents_TermPropertyValues">
+            <End Role="TermPropertyValues" EntitySet="TermPropertyValues" />
+            <End Role="TermPropertyValueToComponents" EntitySet="TermPropertyValueToComponents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Terms_StatusId" Association="OpenDbModel.FK_Terms_StatusId">
+            <End Role="TermStatuses" EntitySet="TermStatuses" />
+            <End Role="Terms" EntitySet="Terms" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="TermCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Parent_Id" Type="Int32" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="ParentCategories" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Key" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TermCategories1" Relationship="OpenDbModel.FK_TermCategories_ParentId" FromRole="TermCategories" ToRole="TermCategories1" />
+          <NavigationProperty Name="TermCategory1" Relationship="OpenDbModel.FK_TermCategories_ParentId" FromRole="TermCategories1" ToRole="TermCategories" />
+          <NavigationProperty Name="TermDefinitions" Relationship="OpenDbModel.FK_TermDefinitions_CategoryId" FromRole="TermCategories" ToRole="TermDefinitions" />
+        </EntityType>
+        <EntityType Name="TermDataColumnType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TermDefinitionPropertyTypes" Relationship="OpenDbModel.FK_TermDefinitionPropertyTypes_DataColumn" FromRole="TermDataColumnType" ToRole="TermDefinitionPropertyTypes" />
+        </EntityType>
+        <EntityType Name="TermDefinitionProperty">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Definition_Id" Type="Int32" Nullable="false" />
+          <Property Name="Type_Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="ImportanceLevel" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TermDefinition" Relationship="OpenDbModel.FK_TermDefinitionProperties_DefinitionId" FromRole="TermDefinitionProperties" ToRole="TermDefinitions" />
+          <NavigationProperty Name="TermDefinitionPropertyImportanceLevel" Relationship="OpenDbModel.FK_TermDefinitionProperties_TermDefinitionPropertyImportanceLevels" FromRole="TermDefinitionProperties" ToRole="TermDefinitionPropertyImportanceLevels" />
+          <NavigationProperty Name="TermDefinitionPropertyType" Relationship="OpenDbModel.FK_TermDefinitionProperties_TypeId" FromRole="TermDefinitionProperties" ToRole="TermDefinitionPropertyTypes" />
+          <NavigationProperty Name="TermPropertyValues" Relationship="OpenDbModel.FK_TermPropertyValues_PropertyId" FromRole="TermDefinitionProperties" ToRole="TermPropertyValues" />
+        </EntityType>
+        <EntityType Name="TermDefinitionPropertyImportanceLevel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TermDefinitionProperties" Relationship="OpenDbModel.FK_TermDefinitionProperties_TermDefinitionPropertyImportanceLevels" FromRole="TermDefinitionPropertyImportanceLevels" ToRole="TermDefinitionProperties" />
+        </EntityType>
+        <EntityType Name="TermDefinitionPropertyType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="DataColumn" Type="Int32" />
+          <Property Name="Key" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="ConfigurableUnits" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="TermDataColumnType" Relationship="OpenDbModel.FK_TermDefinitionPropertyTypes_DataColumn" FromRole="TermDefinitionPropertyTypes" ToRole="TermDataColumnType" />
+          <NavigationProperty Name="TermDefinitionProperties" Relationship="OpenDbModel.FK_TermDefinitionProperties_TypeId" FromRole="TermDefinitionPropertyTypes" ToRole="TermDefinitionProperties" />
+          <NavigationProperty Name="TermPropertyUnits" Relationship="OpenDbModel.FK_TermPropertyUnits_TypeId" FromRole="TermDefinitionPropertyTypes" ToRole="TermPropertyUnits" />
+        </EntityType>
+        <EntityType Name="TermDefinition">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Category_Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="ShortForm" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="LongForm" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Required" Type="Boolean" Nullable="false" />
+          <Property Name="Default" Type="Boolean" Nullable="false" />
+          <Property Name="KeyTerm" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="TermCategory" Relationship="OpenDbModel.FK_TermDefinitions_CategoryId" FromRole="TermDefinitions" ToRole="TermCategories" />
+          <NavigationProperty Name="TermDefinitionProperties" Relationship="OpenDbModel.FK_TermDefinitionProperties_DefinitionId" FromRole="TermDefinitions" ToRole="TermDefinitionProperties" />
+          <NavigationProperty Name="Terms" Relationship="OpenDbModel.FK_Terms_DefinitionId" FromRole="TermDefinitions" ToRole="Terms" />
+        </EntityType>
+        <EntityType Name="TermDocumentOrigin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TermDocumentTypes" Relationship="OpenDbModel.FK_TermDocumentTypes_OriginId" FromRole="TermDocumentOrigins" ToRole="TermDocumentTypes" />
+        </EntityType>
+        <EntityType Name="TermDocument">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="FileName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Hash" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="Status_Id" Type="Int32" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy_Id" Type="Int32" Nullable="false" />
+          <Property Name="LastModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastModifiedBy_Id" Type="Int32" Nullable="false" />
+          <Property Name="EffectiveOn" Type="DateTime" Precision="3" />
+          <Property Name="ExpiredOn" Type="DateTime" Precision="3" />
+          <Property Name="Type_Id" Type="Int32" />
+          <Property Name="Client_Id" Type="Int32" />
+          <Property Name="Matter_Id" Type="Int32" />
+          <Property Name="Component_Id" Type="Int32" Nullable="false" />
+          <Property Name="Reference" Type="Boolean" Nullable="false" />
+          <Property Name="Version" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Parent_Id" Type="Int32" />
+          <Property Name="NotificationSent" Type="Boolean" Nullable="false" />
+          <Property Name="ExcludeSubsidiaries" Type="Boolean" Nullable="false" />
+          <Property Name="SourceContentId" Type="Guid" />
+          <Property Name="PdfContentId" Type="Guid" />
+          <NavigationProperty Name="TermDocuments1" Relationship="OpenDbModel.FK_TermDocuments_ParentId" FromRole="TermDocuments" ToRole="TermDocuments1" />
+          <NavigationProperty Name="TermDocument1" Relationship="OpenDbModel.FK_TermDocuments_ParentId" FromRole="TermDocuments1" ToRole="TermDocuments" />
+          <NavigationProperty Name="TermDocumentStatus" Relationship="OpenDbModel.FK_TermDocuments_TermDocumentStatusesId" FromRole="TermDocuments" ToRole="TermDocumentStatuses" />
+          <NavigationProperty Name="TermDocumentType" Relationship="OpenDbModel.FK_TermDocuments_TermDocumentTypesId" FromRole="TermDocuments" ToRole="TermDocumentTypes" />
+          <NavigationProperty Name="Terms" Relationship="OpenDbModel.FK_Terms_TermDocuments" FromRole="TermDocuments" ToRole="Terms" />
+        </EntityType>
+        <EntityType Name="TermDocumentScope">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TermDocumentTypes" Relationship="OpenDbModel.FK_TermDocumentTypes_ScopeId" FromRole="TermDocumentScope" ToRole="TermDocumentTypes" />
+        </EntityType>
+        <EntityType Name="TermDocumentStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TermDocuments" Relationship="OpenDbModel.FK_TermDocuments_TermDocumentStatusesId" FromRole="TermDocumentStatuses" ToRole="TermDocuments" />
+        </EntityType>
+        <EntityType Name="TermDocumentType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Origin_Id" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Scope_Id" Type="Int32" />
+          <Property Name="Reference" Type="Boolean" Nullable="false" />
+          <Property Name="Required" Type="Boolean" Nullable="false" />
+          <Property Name="Key" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TermDocumentOrigin" Relationship="OpenDbModel.FK_TermDocumentTypes_OriginId" FromRole="TermDocumentTypes" ToRole="TermDocumentOrigins" />
+          <NavigationProperty Name="TermDocuments" Relationship="OpenDbModel.FK_TermDocuments_TermDocumentTypesId" FromRole="TermDocumentTypes" ToRole="TermDocuments" />
+          <NavigationProperty Name="TermDocumentScope" Relationship="OpenDbModel.FK_TermDocumentTypes_ScopeId" FromRole="TermDocumentTypes" ToRole="TermDocumentScope" />
+        </EntityType>
+        <EntityType Name="TermPropertyUnit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Key" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="Type_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TermDefinitionPropertyType" Relationship="OpenDbModel.FK_TermPropertyUnits_TypeId" FromRole="TermPropertyUnits" ToRole="TermDefinitionPropertyTypes" />
+          <NavigationProperty Name="TermPropertyValues" Relationship="OpenDbModel.FK_TermPropertyValues_PropertyUnitId" FromRole="TermPropertyUnits" ToRole="TermPropertyValues" />
+        </EntityType>
+        <EntityType Name="TermPropertyValue">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Property_Id" Type="Int32" Nullable="false" />
+          <Property Name="Term_Id" Type="Int32" />
+          <Property Name="OriginalValue" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="IntValue" Type="Int32" />
+          <Property Name="DecimalValue" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="DateValue" Type="DateTime" Precision="3" />
+          <Property Name="PropertyUnit_Id" Type="Int32" />
+          <NavigationProperty Name="TermDefinitionProperty" Relationship="OpenDbModel.FK_TermPropertyValues_PropertyId" FromRole="TermPropertyValues" ToRole="TermDefinitionProperties" />
+          <NavigationProperty Name="TermPropertyUnit" Relationship="OpenDbModel.FK_TermPropertyValues_PropertyUnitId" FromRole="TermPropertyValues" ToRole="TermPropertyUnits" />
+          <NavigationProperty Name="Term" Relationship="OpenDbModel.FK_TermPropertyValues_TermId" FromRole="TermPropertyValues" ToRole="Terms" />
+          <NavigationProperty Name="TermPropertyValueToComponents" Relationship="OpenDbModel.FK_TermPropertyValueToComponents_TermPropertyValues" FromRole="TermPropertyValues" ToRole="TermPropertyValueToComponents" />
+        </EntityType>
+        <EntityType Name="TermPropertyValueToComponent">
+          <Key>
+            <PropertyRef Name="TermPropertyValue_Id" />
+            <PropertyRef Name="Component_Id" />
+          </Key>
+          <Property Name="TermPropertyValue_Id" Type="Int32" Nullable="false" />
+          <Property Name="Component_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TermPropertyValue" Relationship="OpenDbModel.FK_TermPropertyValueToComponents_TermPropertyValues" FromRole="TermPropertyValueToComponents" ToRole="TermPropertyValues" />
+        </EntityType>
+        <EntityType Name="Term">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Definition_Id" Type="Int32" />
+          <Property Name="Document_Id" Type="Int32" Nullable="false" />
+          <Property Name="Component_Id" Type="Int32" Nullable="false" />
+          <Property Name="Positions" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="EffectiveOn" Type="DateTime" Precision="3" />
+          <Property Name="ExpiredOn" Type="DateTime" Precision="3" />
+          <Property Name="NegotiationStatus_Id" Type="Int32" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="Status_Id" Type="Int32" Nullable="false" />
+          <Property Name="Overridden" Type="Boolean" Nullable="false" />
+          <Property Name="Atypical" Type="Boolean" Nullable="false" />
+          <Property Name="StatusChangeDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="TermDefinition" Relationship="OpenDbModel.FK_Terms_DefinitionId" FromRole="Terms" ToRole="TermDefinitions" />
+          <NavigationProperty Name="TermDocument" Relationship="OpenDbModel.FK_Terms_TermDocuments" FromRole="Terms" ToRole="TermDocuments" />
+          <NavigationProperty Name="TermPropertyValues" Relationship="OpenDbModel.FK_TermPropertyValues_TermId" FromRole="Terms" ToRole="TermPropertyValues" />
+          <NavigationProperty Name="TermStatus" Relationship="OpenDbModel.FK_Terms_StatusId" FromRole="Terms" ToRole="TermStatuses" />
+        </EntityType>
+        <EntityType Name="TermStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Terms" Relationship="OpenDbModel.FK_Terms_StatusId" FromRole="TermStatuses" ToRole="Terms" />
+        </EntityType>
+        <Association Name="FK_TermCategories_ParentId">
+          <End Role="TermCategories" Type="OpenDbModel.TermCategory" Multiplicity="0..1" />
+          <End Role="TermCategories1" Type="OpenDbModel.TermCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermCategories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermCategories1">
+              <PropertyRef Name="Parent_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDefinitions_CategoryId">
+          <End Role="TermCategories" Type="OpenDbModel.TermCategory" Multiplicity="1" />
+          <End Role="TermDefinitions" Type="OpenDbModel.TermDefinition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermCategories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDefinitions">
+              <PropertyRef Name="Category_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDefinitionPropertyTypes_DataColumn">
+          <End Role="TermDataColumnType" Type="OpenDbModel.TermDataColumnType" Multiplicity="0..1" />
+          <End Role="TermDefinitionPropertyTypes" Type="OpenDbModel.TermDefinitionPropertyType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDataColumnType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDefinitionPropertyTypes">
+              <PropertyRef Name="DataColumn" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDefinitionProperties_DefinitionId">
+          <End Role="TermDefinitions" Type="OpenDbModel.TermDefinition" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TermDefinitionProperties" Type="OpenDbModel.TermDefinitionProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDefinitionProperties">
+              <PropertyRef Name="Definition_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDefinitionProperties_TermDefinitionPropertyImportanceLevels">
+          <End Role="TermDefinitionPropertyImportanceLevels" Type="OpenDbModel.TermDefinitionPropertyImportanceLevel" Multiplicity="1" />
+          <End Role="TermDefinitionProperties" Type="OpenDbModel.TermDefinitionProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitionPropertyImportanceLevels">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDefinitionProperties">
+              <PropertyRef Name="ImportanceLevel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDefinitionProperties_TypeId">
+          <End Role="TermDefinitionPropertyTypes" Type="OpenDbModel.TermDefinitionPropertyType" Multiplicity="1" />
+          <End Role="TermDefinitionProperties" Type="OpenDbModel.TermDefinitionProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitionPropertyTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDefinitionProperties">
+              <PropertyRef Name="Type_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermPropertyValues_PropertyId">
+          <End Role="TermDefinitionProperties" Type="OpenDbModel.TermDefinitionProperty" Multiplicity="1" />
+          <End Role="TermPropertyValues" Type="OpenDbModel.TermPropertyValue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitionProperties">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermPropertyValues">
+              <PropertyRef Name="Property_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermPropertyUnits_TypeId">
+          <End Role="TermDefinitionPropertyTypes" Type="OpenDbModel.TermDefinitionPropertyType" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TermPropertyUnits" Type="OpenDbModel.TermPropertyUnit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitionPropertyTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermPropertyUnits">
+              <PropertyRef Name="Type_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Terms_DefinitionId">
+          <End Role="TermDefinitions" Type="OpenDbModel.TermDefinition" Multiplicity="0..1" />
+          <End Role="Terms" Type="OpenDbModel.Term" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDefinitions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Terms">
+              <PropertyRef Name="Definition_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDocumentTypes_OriginId">
+          <End Role="TermDocumentOrigins" Type="OpenDbModel.TermDocumentOrigin" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TermDocumentTypes" Type="OpenDbModel.TermDocumentType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocumentOrigins">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDocumentTypes">
+              <PropertyRef Name="Origin_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDocuments_ParentId">
+          <End Role="TermDocuments" Type="OpenDbModel.TermDocument" Multiplicity="0..1" />
+          <End Role="TermDocuments1" Type="OpenDbModel.TermDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocuments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDocuments1">
+              <PropertyRef Name="Parent_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDocuments_TermDocumentStatusesId">
+          <End Role="TermDocumentStatuses" Type="OpenDbModel.TermDocumentStatus" Multiplicity="1" />
+          <End Role="TermDocuments" Type="OpenDbModel.TermDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocumentStatuses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDocuments">
+              <PropertyRef Name="Status_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDocuments_TermDocumentTypesId">
+          <End Role="TermDocumentTypes" Type="OpenDbModel.TermDocumentType" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TermDocuments" Type="OpenDbModel.TermDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocumentTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDocuments">
+              <PropertyRef Name="Type_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Terms_TermDocuments">
+          <End Role="TermDocuments" Type="OpenDbModel.TermDocument" Multiplicity="1" />
+          <End Role="Terms" Type="OpenDbModel.Term" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocuments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Terms">
+              <PropertyRef Name="Document_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermDocumentTypes_ScopeId">
+          <End Role="TermDocumentScope" Type="OpenDbModel.TermDocumentScope" Multiplicity="0..1" />
+          <End Role="TermDocumentTypes" Type="OpenDbModel.TermDocumentType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermDocumentScope">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermDocumentTypes">
+              <PropertyRef Name="Scope_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermPropertyValues_PropertyUnitId">
+          <End Role="TermPropertyUnits" Type="OpenDbModel.TermPropertyUnit" Multiplicity="0..1" />
+          <End Role="TermPropertyValues" Type="OpenDbModel.TermPropertyValue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermPropertyUnits">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermPropertyValues">
+              <PropertyRef Name="PropertyUnit_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermPropertyValues_TermId">
+          <End Role="Terms" Type="OpenDbModel.Term" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TermPropertyValues" Type="OpenDbModel.TermPropertyValue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Terms">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermPropertyValues">
+              <PropertyRef Name="Term_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TermPropertyValueToComponents_TermPropertyValues">
+          <End Role="TermPropertyValues" Type="OpenDbModel.TermPropertyValue" Multiplicity="1" />
+          <End Role="TermPropertyValueToComponents" Type="OpenDbModel.TermPropertyValueToComponent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermPropertyValues">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TermPropertyValueToComponents">
+              <PropertyRef Name="TermPropertyValue_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Terms_StatusId">
+          <End Role="TermStatuses" Type="OpenDbModel.TermStatus" Multiplicity="1" />
+          <End Role="Terms" Type="OpenDbModel.Term" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TermStatuses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Terms">
+              <PropertyRef Name="Status_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OpenDbModelStoreContainer" CdmEntityContainer="OpenDbEntities">
+          <EntitySetMapping Name="TermCategories">
+            <EntityTypeMapping TypeName="OpenDbModel.TermCategory">
+              <MappingFragment StoreEntitySet="TermCategories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Parent_Id" ColumnName="Parent_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ParentCategories" ColumnName="ParentCategories" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermDataColumnTypes">
+            <EntityTypeMapping TypeName="OpenDbModel.TermDataColumnType">
+              <MappingFragment StoreEntitySet="TermDataColumnType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermDefinitionProperties">
+            <EntityTypeMapping TypeName="OpenDbModel.TermDefinitionProperty">
+              <MappingFragment StoreEntitySet="TermDefinitionProperties">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Definition_Id" ColumnName="Definition_Id" />
+                <ScalarProperty Name="Type_Id" ColumnName="Type_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ImportanceLevel" ColumnName="ImportanceLevel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermDefinitionPropertyImportanceLevels">
+            <EntityTypeMapping TypeName="OpenDbModel.TermDefinitionPropertyImportanceLevel">
+              <MappingFragment StoreEntitySet="TermDefinitionPropertyImportanceLevels">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermDefinitionPropertyTypes">
+            <EntityTypeMapping TypeName="OpenDbModel.TermDefinitionPropertyType">
+              <MappingFragment StoreEntitySet="TermDefinitionPropertyTypes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DataColumn" ColumnName="DataColumn" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="ConfigurableUnits" ColumnName="ConfigurableUnits" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermDefinitions">
+            <EntityTypeMapping TypeName="OpenDbModel.TermDefinition">
+              <MappingFragment StoreEntitySet="TermDefinitions">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ShortForm" ColumnName="ShortForm" />
+                <ScalarProperty Name="LongForm" ColumnName="LongForm" />
+                <ScalarProperty Name="Required" ColumnName="Required" />
+                <ScalarProperty Name="Default" ColumnName="Default" />
+                <ScalarProperty Name="KeyTerm" ColumnName="KeyTerm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermDocumentOrigins">
+            <EntityTypeMapping TypeName="OpenDbModel.TermDocumentOrigin">
+              <MappingFragment StoreEntitySet="TermDocumentOrigins">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermDocuments">
+            <EntityTypeMapping TypeName="OpenDbModel.TermDocument">
+              <MappingFragment StoreEntitySet="TermDocuments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="Hash" ColumnName="Hash" />
+                <ScalarProperty Name="Status_Id" ColumnName="Status_Id" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy_Id" ColumnName="CreatedBy_Id" />
+                <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+                <ScalarProperty Name="LastModifiedBy_Id" ColumnName="LastModifiedBy_Id" />
+                <ScalarProperty Name="EffectiveOn" ColumnName="EffectiveOn" />
+                <ScalarProperty Name="ExpiredOn" ColumnName="ExpiredOn" />
+                <ScalarProperty Name="Type_Id" ColumnName="Type_Id" />
+                <ScalarProperty Name="Client_Id" ColumnName="Client_Id" />
+                <ScalarProperty Name="Matter_Id" ColumnName="Matter_Id" />
+                <ScalarProperty Name="Component_Id" ColumnName="Component_Id" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="Parent_Id" ColumnName="Parent_Id" />
+                <ScalarProperty Name="NotificationSent" ColumnName="NotificationSent" />
+                <ScalarProperty Name="ExcludeSubsidiaries" ColumnName="ExcludeSubsidiaries" />
+                <ScalarProperty Name="SourceContentId" ColumnName="SourceContentId" />
+                <ScalarProperty Name="PdfContentId" ColumnName="PdfContentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermDocumentScopes">
+            <EntityTypeMapping TypeName="OpenDbModel.TermDocumentScope">
+              <MappingFragment StoreEntitySet="TermDocumentScope">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermDocumentStatuses">
+            <EntityTypeMapping TypeName="OpenDbModel.TermDocumentStatus">
+              <MappingFragment StoreEntitySet="TermDocumentStatuses">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermDocumentTypes">
+            <EntityTypeMapping TypeName="OpenDbModel.TermDocumentType">
+              <MappingFragment StoreEntitySet="TermDocumentTypes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Origin_Id" ColumnName="Origin_Id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Scope_Id" ColumnName="Scope_Id" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Required" ColumnName="Required" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermPropertyUnits">
+            <EntityTypeMapping TypeName="OpenDbModel.TermPropertyUnit">
+              <MappingFragment StoreEntitySet="TermPropertyUnits">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="Type_Id" ColumnName="Type_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermPropertyValues">
+            <EntityTypeMapping TypeName="OpenDbModel.TermPropertyValue">
+              <MappingFragment StoreEntitySet="TermPropertyValues">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Property_Id" ColumnName="Property_Id" />
+                <ScalarProperty Name="Term_Id" ColumnName="Term_Id" />
+                <ScalarProperty Name="OriginalValue" ColumnName="OriginalValue" />
+                <ScalarProperty Name="IntValue" ColumnName="IntValue" />
+                <ScalarProperty Name="DecimalValue" ColumnName="DecimalValue" />
+                <ScalarProperty Name="DateValue" ColumnName="DateValue" />
+                <ScalarProperty Name="PropertyUnit_Id" ColumnName="PropertyUnit_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermPropertyValueToComponents">
+            <EntityTypeMapping TypeName="OpenDbModel.TermPropertyValueToComponent">
+              <MappingFragment StoreEntitySet="TermPropertyValueToComponents">
+                <ScalarProperty Name="TermPropertyValue_Id" ColumnName="TermPropertyValue_Id" />
+                <ScalarProperty Name="Component_Id" ColumnName="Component_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Terms">
+            <EntityTypeMapping TypeName="OpenDbModel.Term">
+              <MappingFragment StoreEntitySet="Terms">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Definition_Id" ColumnName="Definition_Id" />
+                <ScalarProperty Name="Document_Id" ColumnName="Document_Id" />
+                <ScalarProperty Name="Component_Id" ColumnName="Component_Id" />
+                <ScalarProperty Name="Positions" ColumnName="Positions" />
+                <ScalarProperty Name="EffectiveOn" ColumnName="EffectiveOn" />
+                <ScalarProperty Name="ExpiredOn" ColumnName="ExpiredOn" />
+                <ScalarProperty Name="NegotiationStatus_Id" ColumnName="NegotiationStatus_Id" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Status_Id" ColumnName="Status_Id" />
+                <ScalarProperty Name="Overridden" ColumnName="Overridden" />
+                <ScalarProperty Name="Atypical" ColumnName="Atypical" />
+                <ScalarProperty Name="StatusChangeDate" ColumnName="StatusChangeDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TermStatuses">
+            <EntityTypeMapping TypeName="OpenDbModel.TermStatus">
+              <MappingFragment StoreEntitySet="TermStatuses">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
