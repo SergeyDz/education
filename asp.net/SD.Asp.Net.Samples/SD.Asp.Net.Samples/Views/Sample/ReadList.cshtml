@@ -1,0 +1,13 @@
+﻿@model SD.Asp.Net.Samples.Models.FileContainer
+
+@{
+    ViewBag.Title = "ReadList";
+    Layout = "~/Views/Shared/_CustomMasterPage.cshtml";
+}
+
+<h2>@Model.Path</h2>
+
+@foreach (object item in Model.Lines) {
+    @Html.Partial("FileLinePartial", item);
+}
+
