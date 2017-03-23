@@ -1,0 +1,1610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{133CE115-1286-4ECA-B5F9-6466B63DE74F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SD.EF.Sample.BoxDb</RootNamespace>
+    <AssemblyName>SD.EF.Sample.BoxDb</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Acknowledgement.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AcknowledgementStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AcknowledgementType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Action.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ActionLog.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ActionLog1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ActionType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Activity.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ActivityInstance.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ActivityInstanceStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ActivityType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Address.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Address1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Address2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AddressOwner.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AddressOwnerType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AddressType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AddressType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AddressType2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AlertPublication.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AlertPublicationType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AlertPublicationType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AlertType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AliasType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AnalystNoteType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Answer.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AnswerOption.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AnswerStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ApplicationDomain.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ArchivedList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ArchivedList1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ArchivedList2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AreaIndustry.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AreaIndustry1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AssociateKeys_Result.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Attachment.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Attachment1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Attachment2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttachmentLog.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttachmentType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Attorney.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Attorney1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyAlert.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyComment.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyPartnerType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyPitchStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyPitchType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyRelationship.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyRelationship1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyRole.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyStatus1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AttorneyType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Audit.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AuditLog.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AuthorizedPersonContact.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillFormat.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillFormat1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillFormat2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillFrequency.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillFrequency1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillingArrangement.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillingArrangement1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillingDetail.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillingDetail1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillingDetailContact.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillingFrequency.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillingRate.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillRange.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillRate.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BillRate1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BlistClient.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BoxDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BoxDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BoxDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BoxDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BoxDb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BusinessIntelligence.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BusinessIntelligenceClientIndustry.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BusinessIntelligenceClientJurisdiction.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BusinessIntelligenceLegalTopic.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BusinessIntelligenceMatterIndustry.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BusinessIntelligenceMatterJurisdiction.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BusinessIntelligenceType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Calendar.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Calendar1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\City.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Classification.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Classification1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Client.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Client1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Client2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientAlert.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientAlias.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientAttorney.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientBusinessContact.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientComment.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientGroup.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientGroup1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientHomeContact.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientInternalRelation.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientInternalStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientMatrix.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientMatter.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientMatterCloseNote.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientMatterInfo.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientRelation.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientStatus1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientStatus2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientStatusNote.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientType2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ClientType3.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\COIReportType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Collection.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CollectionStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CollectionTimeUnit.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Comment.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CommentType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CommentType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CommentType2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CommentType3.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CommonLog.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CompletedList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CompletedList1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CompletedList2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CompleteKeys_Result.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Config.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ConflictSearch.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ConflictsResult.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Contact.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Contact1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ContactOwner.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ContactOwner1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ContactOwnerType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ContactOwnerType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ContactType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ContactType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Control.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ControlProperty.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ControlPropertyValue.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CorporateTree.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CorporateTreeHierarchy.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CorporateTreeMember.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CostOverride.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CostOverridesType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CostOverridesType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Country.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Country1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CountryCurrency.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CountryState.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CreateServiceDeployment_Result.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Currency.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Currency1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSources.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DateType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DeadlineType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DeadlineType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DeliveryChannel.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Department.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Department1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Department2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Department3.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Dependency.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DependencyAction.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DependencyProperty.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DependencyPropertyValue.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DetectRunnableInstances_Result.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Dictionary.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DictionaryType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DisbRate.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DisbRate1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DITAction.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DITDistributionList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DITEmail.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DITType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Division.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Division1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Document.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DocumentInstance.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DocumentType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DomainModel.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EbillingVendorType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EbillingVendorType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Element.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ElementType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EmailPosition.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Encryption.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EngagementLetterDeviation.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EngagementLetterDeviation1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EngagementLetterReason.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EngagementLetterReason1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EngagementLetterStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EngagementLetterStatus1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EngagementLetterType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EngagementLetterType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EntityScoreByDateSource.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EntityType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EntityType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EntityType2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EventLog.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EventSeverity.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EventType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ExceptionHandlingMessage.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ExceptionHandlingRule.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ExceptionHandlingTrace.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ExceptionHandlingType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FeesArrangement.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FeesArrangement1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FeesRetainerType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FeesRetainerType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FeesSpecialArrangement.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FeesSpecialArrangement1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FeesType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FeesType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FieldType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Form.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FormStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FreeKeys_Result.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Gender.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Gender1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GenericEntity.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GenericEntityType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Group.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Hold.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HoldList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HoldSilo.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HoldStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HoldType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HonorificName.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ImportedKYCList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Industry.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Industry1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\InstanceMetadataChangesTable.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\InstancePromotedProperties.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\InstancePromotedPropertiesTable.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Instances.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\InstancesTable.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Integration.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\IntegrationConfig.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\IntegrationTemplate.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\IntegrationType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\InterviewAnswer.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\InterviewTemplate.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\JobPosition.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\JobTitle.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\JoinedList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\JoinedList1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\JoinedList2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Jurisdiction.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Jurisdiction1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KeysTable.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KYCIClient.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KycList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KycList1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KycList2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KYCVClient.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KYCVDirector.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KYCVShareholder.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Layout.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LegalTopic.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LegalTopic1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Locale.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Locale1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LockOwnersTable.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Log.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MaritalStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MarketingActivity.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MarketingActivity1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MarketingType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MarketingType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Matter.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Matter1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Matter2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterAlert.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterAnalystNote.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterAttachment.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterAttorney.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterBill.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterCategory.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterCategory1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterComment.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterContact.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterCountry.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterDate.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterDIT.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterGroup.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterInternalRelation.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterInternalStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterMatrix.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterNature.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterNature1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterPractice.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterReference.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterRelation.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterRole.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterStatus1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterStatus2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterStatusNote.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatterType2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Message.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Message1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MessageOffice.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MessageRecipient.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MessageRecipients.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MessageStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MimeType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Model.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ModelDetail.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ModelProperty.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NameHonorific.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NamePrefix.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NameSuffix.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Notification.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NotificationAttachment.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NotificationRecipient.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NotificationTemplate.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NotifyRule.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Office.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Office1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OrganizationLevel.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OrganizationLevel1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OrganizationUnit.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OwnershipType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OwnershipType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Parameter.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ParameterCategory.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ParameterValue.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Participant.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ParticipantAction.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ParticipantType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartnerType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Party.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Party1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyIndustryType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyInternalPosition.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyInternalRelation.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyMatrix.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyPosition.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyPosition1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyPosition2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyRelation.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyRelation1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyRelation2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyRole.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyTree.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PayorContact.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Permission.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PermissionResource.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PermissionSet.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PermissionType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Person.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Person1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PersonAlias.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PersonStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Pitch.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PitchAttorneyRole.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PitchParty.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PitchSearchLog.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Practice.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Practice1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PracticeCode.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PracticeCode1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PrebillFormat.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PrebillFormat1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PrefixName.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Process.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProcessInstance.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProcessInstanceResult.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProcessInstanceStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProcessStartMode.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProcessStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProcessType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PropertyType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PropertyValue.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Question.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Questionnaire.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\QuestionnaireInstance.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ReferralSource.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ReferralSource1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ReferralSource2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Referrer.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ReferrerType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ReferrerType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RefferBy.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RefferBy1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Region.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RelatedParty.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RelatedPartyAlert.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RelatedPartyComment.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Report.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ReportDefinition.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ReportFilter.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ReportType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Request.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Request1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RequestStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RequestType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RequestType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RequestUser.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RequestUser1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RequestUserType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RequestUserType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Resource.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Resource1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ResourceType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ResourceType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ResourceValue.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ResponsbilityType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ResponsbilityType1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Role.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RolePermission.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RolePersonnelType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Rule.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RuleSet.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RuleType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RunnableInstancesTable.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Scope.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SearchRequest.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SearchRequestAttachment.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SearchRequestDataSource.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SearchRequestTerm.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SearchRequestTermSource.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SearchResult_COI.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SearchResult_EntityScore.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ServiceDeployments.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ServiceDeploymentsTable.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ShowConnections_Result.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SiloCustodian.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SiloDataSteward.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SiloList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SiloOrgUnit.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SiloQuestion.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SiloType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sp_helpdiagrams_Result.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Stakeholder.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StakeholderByType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardParty.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardPartyAlert.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardPartyAlertType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardPartyAlias.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardPartyComment.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardPartyIndustry.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardPartyLink.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardPartyStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardPartyStatus1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardSilo.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardSiloCustodian.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardSiloDataSteward.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StandardSiloQuestion.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\State.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\State1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SuffixName.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sysdiagrams.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Task.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Task1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TaskHandler.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TaskList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TaskList1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TaskStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TaskStatus1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TaxJurisdiction.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TaxJurisdiction1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TimeEntry.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Timekeeper.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TimekeeperList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TimerAction.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TodoList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TodoList1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TodoList2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TryLoadRunnableInstance_Result.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TypeOfBusiness.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TypeOfBusiness1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UploadedData.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\User.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserContact.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserGroup.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserGroupCriteria.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserGroupMembership.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserGroupRole.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserOffice.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserRole.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserStatus.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ValidationRule.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Validator.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ValidatorProperty.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ValidatorPropertyValue.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WaitRule.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Waiver.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WaiverCondition.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WaiverConstraint.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WaiverGrant.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WaiverOwner.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WaiverOwnerType.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WatchList.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WatchList1.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\WatchList2.cs">
+      <DependentUpon>BoxDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Data\BoxDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BoxDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Data\BoxDb.edmx.diagram">
+      <DependentUpon>BoxDb.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\BoxDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BoxDb.edmx</DependentUpon>
+      <LastGenOutput>BoxDb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\BoxDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BoxDb.edmx</DependentUpon>
+      <LastGenOutput>BoxDb.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
